@@ -1,7 +1,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding: var(--scroll-padding, 5rem);
-  }
+    overflow-x: hidden;
+}
 
 body {
     margin: 0px; 
@@ -10,12 +11,12 @@ body {
 
 
 .navbar{
-    width: 100vw; 
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center; 
     z-index: 100;
-    padding: 1rem 2rem 1rem 3rem; 
+    padding: 1rem 1rem 1rem 3rem; 
     position: fixed; 
     box-sizing: border-box;
 
@@ -60,9 +61,15 @@ body {
     flex-direction: column; 
     
     height: 100vh;
-    width: 70vw; 
+    width: 100vw; 
     margin: 0 auto;
     
+}
+
+.wrapper{
+    height: 100vh;
+    width: 70vw; 
+    margin: 0 auto;
 }
 
 .row .about-me{
@@ -98,6 +105,7 @@ body {
 
 
 .row .about-me img{
+    justify-content: end;
     width: 22rem; 
     height: auto; 
     box-shadow: 0 0.5rem 0.5rem 0.5rem #04aa6d86;
@@ -143,7 +151,7 @@ body {
 
 .projects img{
     width: 40rem; 
-    margin-left: 5rem;
+    
     height: auto;
     transition: all 0.6s;
     border-radius: 0.5rem;
@@ -274,3 +282,134 @@ body {
     justify-content: center; 
     align-items: center;
 } 
+
+@media (max-width: 1250px) {
+    .wrapper{
+        height: 100vh;
+        width: 80vw; 
+        margin: 0 auto;
+    }
+
+    .projects .project-1 .project-desc{
+        padding-left: 5rem;
+    }
+    
+    .projects .project-2 .project-desc{
+        padding-left: 5rem;
+    }
+
+}
+
+@media (max-width: 1150px) {
+    .wrapper{
+        height: 100vh;
+        width: 90vw; 
+        margin: 0 auto;
+    }
+
+    .projects .project-1{
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .projects .project-1 .project-desc{
+        padding-left: 0;
+        padding-top: 3rem;
+    }
+
+    .projects .project-2{
+        padding-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .projects .project-2 .project-desc{
+        padding-left: 0;
+        padding-top: 3rem;
+    }
+
+    .projects p{
+        margin-top: 3rem;
+        width: 24rem;
+        font-size: 1rem;
+        font-family: "Open sans";
+    
+    }
+    
+    .projects ul{
+        list-style-type: none; 
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; 
+    
+    }
+    
+    .projects li{
+        float: left;
+        font-weight: bold;
+        font-size: 0.8rem;
+        font-family: "Open sans";
+        margin-top: 1rem;
+        text-align: center;
+    
+    } 
+    
+
+}
+
+
+@media (max-width: 800px) {
+
+
+    .wrapper{
+        height: 100vh;
+        width: 95vw; 
+        margin: 0 auto;
+        
+    }
+
+    .row .about-me{
+        margin-top: 10rem;
+        display: flex; 
+        flex-direction: column-reverse;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .row .about-me .about-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .row .about-me .about-text p{
+        margin: 0 2rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar{
+        display: none;
+    }
+
+    .row .about-me{
+        margin-top: 5rem;
+    }
+
+    .row .projects img{
+        width: 25rem;
+    }
+
+    .container{
+        margin-top: 3rem;
+        display: flex; 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

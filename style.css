@@ -413,3 +413,14 @@ body {
         align-items: flex-start;
     }
 }
+
+
+@media (max-width: 400px) {
+    .row .about-me img{
+        width: 16rem; 
+    } 
+
+    .row .projects img{
+        width: 22rem;
+    }
+}

@@ -453,4 +453,8 @@ body {
     .row .projects img{
         width: 22rem;
     }
+
+    .projects img:hover {
+        transform: scale(0.8);
+    }
 }
